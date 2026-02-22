@@ -28,8 +28,24 @@ public class Main {
         courseEnrollment.displayAll();
 
     // Update
+        Student updatedInfo = new Student("2024384681", "John Doe", "BSCS");
+        studentEnrollment.updateStudent(updatedInfo);
+        studentEnrollment.displayAll();
 
 
+        Course updatedCourse = new Course("0002", "Pathfi", "BSIT");
+        courseEnrollment.updateCourse(updatedCourse);
+        courseEnrollment.displayAll();
+
+    // Remove
+
+        Student removeInfo = new Student("2024384681", "", "");
+        studentEnrollment.deleteStudent(removeInfo);
+        studentEnrollment.displayAll();
+
+        Course removeCourse = new Course("0002", "", "");
+        courseEnrollment.deleteCourse(removeCourse);
+        courseEnrollment.displayAll();
 
 
 

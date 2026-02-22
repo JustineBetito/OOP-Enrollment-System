@@ -18,12 +18,31 @@ public class StudentEnrollment {
         System.out.println(studentsList);
     }
 
-
     // Update
-    public void updateStudent(Student student){
-        for(int i = 0; i < studentsList.size(); i++){
-            if(studentsList.get(i))
+    public void updateStudent(Student student) {
+        for (int i = 0; i < studentsList.size(); i++) {
+
+            if (studentsList.get(i).getStudentID().equals(student.getStudentID())) {
+                studentsList.set(i, student);
+                break;
+            }
         }
+
+    }
+
+    // Remove
+    public String deleteStudent(Student student) {
+
+        for (int i = 0; i < studentsList.size(); i++) {
+            if (studentsList.get(i).getStudentID().equals(student.getStudentID())) {
+                studentsList.remove(i);
+                return " Student Successfully Deleted";
+            }
+        }
+        return "Student ID not found.";
+    }
+
+
     }
 
 
@@ -31,4 +50,4 @@ public class StudentEnrollment {
 
 
 
-}
+

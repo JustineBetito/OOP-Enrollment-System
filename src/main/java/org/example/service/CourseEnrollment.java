@@ -21,5 +21,29 @@ public class CourseEnrollment {
 
     // Update
 
+    public void updateCourse(Course course){
+        for (int i = 0; i < courseList.size(); i++){
+
+            if(courseList.get(i).getCourseID().equals(course.getCourseID())){
+                courseList.set(i, course);
+                break;
+            }
+        }
+    }
+
+    // Remove
+
+    public String deleteCourse(Course course){
+
+        for(int i = 0; i < courseList.size(); i++){
+            if(courseList.get(i).getCourseID().equals(course.getCourseID())) {
+                courseList.remove(i);
+                return "Course Successfully Deleted";
+            }
+        }
+        return "Course ID not found";
+    }
 
 }
+
+
