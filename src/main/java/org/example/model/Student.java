@@ -9,6 +9,8 @@ public class Student extends Person {
         this.program = program;
     }
 
+
+
     public String getProgram(){
         return program;
     }
@@ -16,6 +18,8 @@ public class Student extends Person {
     public void setProgram(String program){
         this.program = program;
     }
+
+
 }
 
 
