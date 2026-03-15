@@ -1,56 +1,54 @@
 package org.example;
 
-import org.example.model.Course;
+import org.example.model.Instructor;
 import org.example.model.Student;
-import org.example.service.CourseEnrollment;
 import org.example.service.StudentRegistration;
-import org.example.service.TuitionfeePayment;
+import org.example.service.CourseEnrollment;
+import org.example.model.Course;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-       /* StudentRegistration studentRegistration = new StudentRegistration();
+
+        Student student = new Student(2024384681, "Justine Danielle L. Betito", "BSIT");
+        Instructor instructor = new Instructor(1001, "Mr. Reyes", "Integrative Programming");
+
+        System.out.println("=== Main Task Demo ===");
+        student.mainTask();
+        instructor.mainTask();
+        System.out.println();
+
+
+        Scanner scanner = new Scanner(System.in);
+        StudentRegistration studentRegistration = new StudentRegistration();
         CourseEnrollment courseEnrollment = new CourseEnrollment();
 
+        Student s1 = new Student(2024384681, "Justine Danielle L. Betito", "BSIT");
+        Course c1 = new Course("0001", "Integrative Programming", "BSIT");
 
-        // Create
-        studentRegistration.addStudent(new Student(2024384681, "Justine Danielle L. Betito", "BSIT "));
-        studentRegistration.addStudent(new Student(2024681384, "Danielle Justine Lopez", "BSIT"));
+        System.out.println("=== Enrollment System ===");
+        System.out.println("[1] Add Student");
+        System.out.println("[2] Display Students");
+        System.out.println("[3] Update Student");
+        System.out.println("[4] Remove Student");
+        System.out.println("[5] Add Course");
+        System.out.println("[6] Display Courses");
+        System.out.println("[7] Exit");
 
-        courseEnrollment.addCourse(new Course("0001", "Inteprog", "BSIT"));
-        courseEnrollment.addCourse(new Course("0002", "IT Proma", "BSIT"));
-
-
-        // Display
-        studentRegistration.displayAll();
-        courseEnrollment.displayAll();
-
-        // Update
-        Student updatedInfo = new Student(2024384681, "John Doe", "BSCS");
-        studentRegistration.updateStudent(updatedInfo);
-        studentRegistration.displayAll();
-
-
-        Course updatedCourse = new Course("0002", "Pathfi", "BSIT");
-        courseEnrollment.updateCourse(updatedCourse);
-        courseEnrollment.displayAll();
-
-        // Remove
-
-        Student removeInfo = new Student(2024384681, "", "");
-        studentRegistration.deleteStudent(removeInfo);
-        studentRegistration.displayAll();
-
-        Course removeCourse = new Course("0002", "", "");
-        courseEnrollment.deleteCourse(removeCourse);
-        courseEnrollment.displayAll();*/
-
-
-        TuitionfeePayment tuitionfeePayment = new TuitionfeePayment();
-
+        while(true){
+            System.out.print("Enter: ");
+            String choice = scanner.nextLine();
+            switch(choice){
+                case "1" -> studentRegistration.addStudent(s1);
+                case "2" -> studentRegistration.displayAll();
+                case "3" -> studentRegistration.updateStudent(s1);
+                case "4" -> System.out.println(studentRegistration.deleteStudent(s1));
+                case "5" -> courseEnrollment.addCourse(c1);
+                case "6" -> courseEnrollment.displayAll();
+                case "7" -> System.exit(0);
+                default -> System.out.println("Invalid choice. Try again.");
+            }
+        }
     }
 }
-
-
-
-
