@@ -31,3 +31,8 @@ Service
 ![Studentregistration_part1.png](src/main/resources/Images/Studentregistration_part1.png)
 ![Studentregistration_part2.png](src/main/resources/Images/Studentregistration_part2.png)
 
+
+**3. Description**
+
+Abstract Activity Screenshot Person Class
+

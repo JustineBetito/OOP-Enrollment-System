@@ -4,11 +4,12 @@ import org.example.model.Course;
 import org.example.model.Student;
 import org.example.service.CourseEnrollment;
 import org.example.service.StudentRegistration;
+import org.example.service.TuitionfeePayment;
 
 public class Main {
     public static void main(String[] args) {
 
-        StudentRegistration studentRegistration = new StudentRegistration();
+       /* StudentRegistration studentRegistration = new StudentRegistration();
         CourseEnrollment courseEnrollment = new CourseEnrollment();
 
 
@@ -42,7 +43,10 @@ public class Main {
 
         Course removeCourse = new Course("0002", "", "");
         courseEnrollment.deleteCourse(removeCourse);
-        courseEnrollment.displayAll();
+        courseEnrollment.displayAll();*/
+
+
+        TuitionfeePayment tuitionfeePayment = new TuitionfeePayment();
 
     }
 }
