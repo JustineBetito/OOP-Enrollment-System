@@ -9,4 +9,6 @@ public interface IInstructorService {
     void assignInstructorToSection(Instructor instructor, Section section);
     Instructor getInstructorDetails(int instructorId);
     ArrayList<Instructor> getAllInstructors();
+
+    Section getInstructorAssignment(int instructorId);
 }
