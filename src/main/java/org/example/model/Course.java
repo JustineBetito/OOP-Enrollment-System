@@ -53,7 +53,7 @@ public class Course {
 
     public void display(){
 
-        System.out.printf("\nCourse Name: %s\nCourse ID: %s\nProgram: %s", getCourseName(), getCourseID(), getPorgram());
+        System.out.printf("\nCourse Name: %s\nCourse ID: %s\nProgram: %s", getCourseName(), getCourseID(), getProgram());
     }
 
 }
