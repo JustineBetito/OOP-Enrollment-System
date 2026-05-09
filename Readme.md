@@ -31,3 +31,10 @@ Service
 ![Studentregistration_part1.png](src/main/resources/Images/Studentregistration_part1.png)
 ![Studentregistration_part2.png](src/main/resources/Images/Studentregistration_part2.png)
 
+
+**3. Description**
+
+Abstraction Activity march 14, 2026
+![Person_abstraction.png](src/main/resources/Images/Person_abstraction.png)
+![Student_abstraction.png](src/main/resources/Images/Student_abstraction.png)
+![Instructor_abstraction.png](src/main/resources/Images/Instructor_abstraction.png)

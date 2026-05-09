@@ -17,5 +17,9 @@ public class Instructor extends Person{
     public void setCourse(String course){
         this.course = course;
     }
+    @Override
+    public void mainTask(){
+        System.out.println("Instructor Grades");
+    }
 
 }

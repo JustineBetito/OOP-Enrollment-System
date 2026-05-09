@@ -40,7 +40,7 @@ public class Course {
         this.courseName = courseName;
     }
 
-    public String getPorgram(){
+    public String getProgram(){
 
         return program;
 
