@@ -2,8 +2,9 @@ package org.example;
 
 import org.example.model.Instructor;
 import org.example.model.Student;
-import org.example.service.StudentRegistration;
-import org.example.service.CourseEnrollment;
+import org.example.service.CampusRegistrar;
+import org.example.service.StudentRegistrationimpl;
+import org.example.service.CourseRegistrationimpl;
 import org.example.model.Course;
 import java.util.Scanner;
 
@@ -21,8 +22,8 @@ public class Main {
 
 
         Scanner scanner = new Scanner(System.in);
-        StudentRegistration studentRegistration = new StudentRegistration();
-        CourseEnrollment courseEnrollment = new CourseEnrollment();
+        StudentRegistrationimpl studentRegistration = new StudentRegistrationimpl();
+        CourseRegistrationimpl courseRegistration = new CourseRegistrationimpl();
 
         Student s1 = new Student(2024384681, "Justine Danielle L. Betito", "BSIT");
         Course c1 = new Course("0001", "Integrative Programming", "BSIT");
@@ -36,16 +37,18 @@ public class Main {
         System.out.println("[6] Display Courses");
         System.out.println("[7] Exit");
 
+
+        CampusRegistrar campusRegistrar = new CampusRegistrar(studentRegistration, courseRegistration);
         while(true){
             System.out.print("Enter: ");
             String choice = scanner.nextLine();
             switch(choice){
-                case "1" -> studentRegistration.addStudent(s1);
-                case "2" -> studentRegistration.displayAll();
-                case "3" -> studentRegistration.updateStudent(s1);
-                case "4" -> System.out.println(studentRegistration.deleteStudent(s1));
-                case "5" -> courseEnrollment.addCourse(c1);
-                case "6" -> courseEnrollment.displayAll();
+                case "1" -> campusRegistrar.addStudent(s1);
+                case "2" -> campusRegistrar.displayAllStudent();
+                case "3" -> campusRegistrar.updateStudent(s1);
+                case "4" -> System.out.println(campusRegistrar.deleteStudent(s1));
+                case "5" -> campusRegistrar.addCourse(c1);
+                case "6" -> campusRegistrar.displayAllCourse();
                 case "7" -> System.exit(0);
                 default -> System.out.println("Invalid choice. Try again.");
             }
